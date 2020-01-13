@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ApplicationSettings.qml</file>
+        <file>MainWindow.qml</file>
+        <file>NotePanel.qml</file>
+        <file>Note.qml</file>
+        <file>ControlPanel.qml</file>
+        <file>ConfigWindow.qml</file>
+        <file>ConfigFooter.qml</file>
+        <file>ConfigTabApperance.qml</file>
+        <file>ConfigTabEditor.qml</file>
+    </qresource>
+</RCC>
