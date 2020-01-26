@@ -1,8 +1,7 @@
 #ifndef NOTE_PANEL_HPP
 #define NOTE_PANEL_HPP
 
-#include <QtCore/QDebug>
-#include <QtCore/QObject>
+#include <QObject>
 
 class NotePanel : public QObject {
 Q_OBJECT

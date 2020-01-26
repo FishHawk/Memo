@@ -1,8 +1,9 @@
 #ifndef PANEL_LIST_MODEL_HPP
 #define PANEL_LIST_MODEL_HPP
 
-#include <QtCore/QAbstractListModel>
 #include "note_panel.hpp"
+
+#include <QAbstractListModel>
 
 class PanelListModel : public QAbstractListModel {
 Q_OBJECT

@@ -1,13 +1,7 @@
-#include <QGuiApplication>
-#include <QtCore/QSettings>
-#include <QtCore/QStandardPaths>
-
 #include <QAction>
 
-#include <KLocalizedString>
 #include <KGlobalAccel>
-
-#include <KStandardAction>
+#include <KLocalizedString>
 
 #include "backend.hpp"
 

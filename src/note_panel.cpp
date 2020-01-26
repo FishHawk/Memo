@@ -1,6 +1,6 @@
-#include <QtCore/QStandardPaths>
-#include <QtCore/QFile>
-#include <QtCore/QTextStream>
+#include <QStandardPaths>
+#include <QFile>
+#include <QTextStream>
 
 #include "note_panel.hpp"
 

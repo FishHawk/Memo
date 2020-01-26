@@ -12,7 +12,6 @@ static Backend *backend;
 static QObject *getBackend(QQmlEngine *, QJSEngine *) { return backend; }
 
 int main(int argc, char *argv[]) {
-    // initialize application
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
     QApplication::setApplicationName("memo");
@@ -31,16 +30,12 @@ int main(int argc, char *argv[]) {
     QSettings::setPath(QSettings::defaultFormat(), QSettings::UserScope,
                        QStandardPaths::writableLocation(QStandardPaths::AppConfigLocation));
 
-    // create c++ backend
-    backend = new Backend();
-
     KDBusService service(KDBusService::Unique);
 
-    // expose c++ backend to qml
+    backend = new Backend();
     QQmlApplicationEngine::setObjectOwnership(backend, QQmlEngine::CppOwnership);
     qmlRegisterSingletonType<Backend>("Backend", 1, 0, "Backend", getBackend);
 
-    // load qml
     QQmlApplicationEngine engine;
     engine.load(QUrl(QStringLiteral("qrc:/MainWindow.qml")));
 
