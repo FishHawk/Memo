@@ -16,11 +16,10 @@ set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH} ${ECM_KDE_MODULE_DIR} ${CMAKE_CURRENT_S
 
 set(KF5_MIN_VERSION "5.2.0")
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
-        CoreAddons
         I18n
         XmlGui
-        GlobalAccel
-        ConfigWidgets)
+        DBusAddons
+        GlobalAccel)
 
 add_executable(memo
         qml/qml.qrc
@@ -38,8 +37,7 @@ target_link_libraries(memo
         Qt5::Quick
         Qt5::QuickControls2
 
-        KF5::CoreAddons
         KF5::I18n
         KF5::XmlGui
         KF5::GlobalAccel
-        KF5::ConfigWidgets)
+        KF5::DBusAddons)

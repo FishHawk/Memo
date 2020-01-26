@@ -4,6 +4,8 @@
 #include <QQmlApplicationEngine>
 #include <QStandardPaths>
 
+#include <KDBusService>
+
 #include "backend.hpp"
 
 static Backend *backend;
@@ -31,6 +33,8 @@ int main(int argc, char *argv[]) {
 
     // create c++ backend
     backend = new Backend();
+
+    KDBusService service(KDBusService::Unique);
 
     // expose c++ backend to qml
     QQmlApplicationEngine::setObjectOwnership(backend, QQmlEngine::CppOwnership);
