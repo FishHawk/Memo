@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file alias="memo">memo.svg</file>
+    </qresource>
+</RCC>
