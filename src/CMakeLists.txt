@@ -22,7 +22,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS
         GlobalAccel)
 
 add_executable(memo
-        qml/qml.qrc
+        qml/resources.qrc
         icon/resources.qrc
         main.cpp
         backend.cpp
