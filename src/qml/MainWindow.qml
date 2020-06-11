@@ -80,7 +80,7 @@ ApplicationWindow {
             id: controlPanel
             Layout.fillWidth: true
             Layout.preferredHeight: 30
-            color: palette.midlight
+            color: palette.base
         }
     }
 
@@ -88,9 +88,9 @@ ApplicationWindow {
         anchors.fill: mainPanel
         horizontalOffset: 0
         verticalOffset: 2
-        radius: 3
-        samples: 7
+        radius: 5
+        samples: 9
         source: mainPanel
-        color: "black"
+        color: "#0f0f0f"
     }
 }

@@ -4,13 +4,13 @@ import QtQuick.Controls 2.14
 Item {
     ScrollView {
         anchors.fill: parent
-        anchors.margins: 10
 
         ScrollBar.vertical.policy: ScrollBar.AlwaysOn
         ScrollBar.horizontal.policy: ScrollBar.AlwaysOn
 
         TextArea {
             text: item.content
+            padding: 20
 
             selectByMouse: true
             wrapMode: TextEdit.Wrap
