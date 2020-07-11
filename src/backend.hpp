@@ -1,8 +1,8 @@
 #ifndef BACKEND_HPP
 #define BACKEND_HPP
 
-#include <QtCore/QObject>
 #include <QSettings>
+#include <QtCore/QObject>
 
 #include <KActionCollection>
 

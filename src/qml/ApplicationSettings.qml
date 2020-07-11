@@ -8,6 +8,7 @@ QtObject {
     property double position
     property double animationDuration
 
+    property int panelNumber
     property string fontFamily: "Noto Sans"
     property int fontPixelSize: 18
 
@@ -27,6 +28,7 @@ QtObject {
         position = limitRange(Backend.loadSetting("position", 0.5), 0.0, 1.0)
         animationDuration = limitRange(Backend.loadSetting("animationDuration", 200), 0.0, 500.0)
 
+        panelNumber = Backend.loadSetting("panelNumber", 4)
         fontFamily = Backend.loadSetting("fontName", "Noto Sans")
         if (Qt.fontFamilies().indexOf(fontFamily) < 0) {
             fontFamily = "Noto Sans"
@@ -40,6 +42,7 @@ QtObject {
         Backend.saveSetting("position", limitRange(position, 0.0, 1.0))
         Backend.saveSetting("animationDuration", limitRange(animationDuration, 0.0, 500.0))
 
+        Backend.saveSetting("panelNumber", limitRange(panelNumber, 1, 8))
         Backend.saveSetting("fontName", fontFamily)
         Backend.saveSetting("fontSize",limitRange(fontPixelSize, 4, 30))
     }

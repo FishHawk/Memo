@@ -8,6 +8,23 @@ ColumnLayout {
     spacing: 25
     property int indent: 30
 
+    Label { text: "Panel:" }
+
+    RowLayout {
+        Layout.leftMargin: tab.indent
+        Layout.fillWidth:true
+        spacing: tab.spacing
+
+        Label { text: "Number:" }
+        SpinBox {
+            Layout.preferredWidth: 60
+            value: settings.panelNumber
+            from: 1
+            to: 8
+            onValueChanged: settings.panelNumber = value
+        }
+    }
+
     Label { text: "Font:" }
 
     RowLayout {

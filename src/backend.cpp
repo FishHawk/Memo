@@ -6,7 +6,10 @@
 #include "backend.hpp"
 
 Backend::Backend() {
-    m_panels = new PanelListModel(4);
+    int panel_number = loadSetting("panelNumber", 4).toInt();
+    panel_number = qMax(panel_number, 1);
+    panel_number = qMin(panel_number, 8);
+    m_panels = new PanelListModel(panel_number);
 
     m_actionCollection = new KActionCollection(this);
     QAction *action = m_actionCollection->addAction(QStringLiteral("toggles-state"));
