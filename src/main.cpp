@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     QApplication::setApplicationName("memo");
     QApplication::setApplicationDisplayName("Memo");
-    QApplication::setApplicationVersion("0.1.1");
+    QApplication::setApplicationVersion("0.1.2");
     QApplication::setWindowIcon(QIcon(":/icon/memo"));
 
     // initialize data and config dir
